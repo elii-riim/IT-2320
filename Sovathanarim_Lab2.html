@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<script type="text/javascript">
+	var Length = window.prompt("How many numbers in sequence? ");
+
+	var Fib1,Fib2, result;
+
+	Fib1 = 0;
+	Fib2 = 1;
+	Result = Fib2;
+
+
+	for(var i=1;i<Length;i++){
+		document.write(Result+"<br/>");
+		Result = Fib1 + Fib2;
+		Fib1=Fib2;
+		Fib2=Result;
+	}
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
