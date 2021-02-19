@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Demo - Using Javascript</title>
+        <link rel="stylesheet" type="text/css" href="Lab3.css" />
+        <meta charset="utf-8">
+        <script src="Main.js"></script>
+        </head>
+    <body>
+            <div>
+            <h2> Welcome to this little demo page!!!!!!!</h2>
+            <button 
+            onclick="hello()">Click me
+            </button>
+
+            <p id="demo"></p>
+            <script>
+              function hello(){
+                  var text1 = "By: Sovathana Eli Rim";
+                  document.getElementById("demo").innerHTML = text1;
+              }
+            </script>
+                </div>
+    </body>
+             
+        <div> 
+            <h2>Let's try some math here...</h2>
+            <p>What is the sum of 3 and 5?</p>
+            <button onclick="add();">Show answer</button>
+
+            <p id="Question1"></p>
+            <script>
+                function add(){
+                    var text1 = "Answer = 8";
+                    document.getElementById("Question1").innerHTML = text1;
+                }
+            </script>
+            <br>
+
+            <p>If you subtract 100 from 1000 what do you get?</p>
+            <button onclick="substract();">Show answer</button>
+
+            <p id="Question2"></p>
+            <script>
+                function substract(){
+                    var text1 = "Answer = 900";
+                    document.getElementById("Question2").innerHTML = text1;
+                }
+            </script>
+            <br>
+            
+            <p>Click this button to add 10 to a number "100"</p>
+            <button onclick="increment();">Show answer</button>
+            
+            <p id="Question3"></p>
+            <script>
+                function increment(){
+                    var text1 = "Answer = 110";
+                    document.getElementById("Question3").innerHTML = text1;
+                }
+            </script>
+            <br>
+
+            <p>Charlie is 162cm tall and John is 135cm tall. Who is taller?</p>
+            <button onclick="compare();">Show answer</button>
+
+            <p id="Question4"></p>
+            <script>
+                function compare(){
+                    var text1 = "Answer = Charlie is taller.";
+                    document.getElementById("Question4").innerHTML = text1;
+                }
+            </script>   
+            <br>
+            
+            <p>Tell me if the given fruit is tropical</p>
+            <button onclick="IsTropical('mango');">Show answer</button>
+
+            <p id="Question5"></p>
+            <script>
+                function IsTropical(){
+                    var text1 = "Answer = Yes it is a tropical fruit.";
+                    document.getElementById("Question5").innerHTML = text1;
+                }
+            </script>
+            <br>
+
+            <p>Say hello 5 times</p>
+            <button onclick="Repeat();">Show answer</button>
+
+            <p id="Question6"></p>
+            <script>
+                    function Repeat(){
+                        var text1 = "HelloWorld ";
+                        var text2 = " HelloWorld ";
+                        var text3 = " HelloWorld ";
+                        var text4 = " HelloWorld ";
+                        var text5 = " HelloWorld ";
+                        var text6 = text1 + text2 + text3 + text4 + text5;
+                        document.getElementById("Question6").innerHTML = text6;
+                    }
+            </script>
+            <br>
+
+            <h2>Homework</h2>
+
+            <p>Let's multiply 25 by 42. The answer is ...</p>
+            <button onclick="Multi();">Show answer</button>
+
+            <p id="Homework1"></p>
+            <script>
+                function Multi(){
+                    var text1 = "Answer = 1050";
+                    document.getElementById("Homework1").innerHTML = text1;
+                }
+            </script>
+            <br>
+
+            <p>I want to divide 48 pencils among 12 kids. How many pencils do each child get?</p>
+            <button onclick="Divide()";>Show answer</button>
+            <p id="Homework2"></p>
+
+            <script>
+                function Divide(){
+            var x = 48;
+            var y = 12;
+            var z = x / y;
+            document.getElementById("Homework2").innerHTML = z;
+            }
+            </script>
+            <br>
+            
+            <p>Calculate the 'mean' of these numbers: 25,47,98,46,52</p>
+            <button onclick="Mean();">Show answer</button>
+
+            <p id="Homework3"></p>
+            <script>
+                function Mean(){
+                var numberArray=[ 25,47,98,46,52], thisTotal=0,thisAverage=0;
+                for(var i=0;i<numberArray.length;i++)
+                {thisTotal+=numberArray[i];}
+                thisAverage=(thisTotal/numberArray.length);
+                document.getElementById("Homework3").innerHTML = thisAverage;
+                }
+            </script>
+            <br>
+
+            <p>What is the sum of all even numbers between 2 and 200?</p>
+            <button onclick="evenNum();">Show answer</button>
+
+            <p id="Homework4"></p>
+            <script type="text/javascript">
+            function evenNum(){
+            var a=2;
+            var sum =0;
+            for(a=1;a<=200;a++){
+                if(a%2==0){
+                    sum=sum+a
+                }
+            }
+            document.getElementById("Homework4").innerHTML = sum;
+        }
+            </script>
+            <br>
+           
+            <p>Display the 1st 20 numbers in a fibonacci series</p>
+            <button onclick="fib()";>Show answer</button>
+
+            <p id="Homework5"></p>
+            <script type="text/javascript">
+            function fib(){
+            var a,b, result;
+            a=0;
+            b=1;
+            result=b;
+
+            for(var i=1; i<21;i++){
+                document.write(result + "<br/>");
+                result = a+b;
+                a=b;
+                b=result;
+                console.log(b);
+            }
+        }
+            </script>
+</html>
